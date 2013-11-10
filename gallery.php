@@ -43,29 +43,15 @@
 				<div class="content">
 					<?php
 
-					    // Include the UberGallery class
-					    include('resources/UberGallery.php');
-
-					    // Initialize the UberGallery object
-					    $gallery = new UberGallery();
-
-					    // Initialize the gallery array
-					    $galleryArray = $gallery->readImageDirectory('gallery-images');
-
-					    // Define theme path
-					    if (!defined('THEMEPATH')) {
-					        define('THEMEPATH', $gallery->getThemePath());
+					if ($handle = opendir('images/gallery')) {
+					    while (false !== ($entry = readdir($handle))) {
+					        if ($entry != "." && $entry != "..") {
+					        	// entry var holds the image name - images/gallery/$entry will be the url to the image
+					            // echo "<img class='lazy' data-original='images/gallery/$entry'></img>";
+					        }
 					    }
-
-					    // Set path to theme index
-					    $themeIndex = $gallery->getThemePath(true) . '/index.php';
-
-					    // Initialize the theme
-					    if (file_exists($themeIndex)) {
-					        include($themeIndex);
-					    } else {
-					        die('ERROR: Failed to initialize theme');
-					    }
+					    closedir($handle);
+					}
 
 					?>
 				</div>
@@ -75,6 +61,11 @@
 				<p style="margin-left: 30px; padding-top: 15px;"><strong style="margin-right: 300px;">Close Action Airsoft | Pixel Blue-Print</strong>   Contact Email: enquiries@close-action.co.uk</p>
 		</footer>
 	</body>
-	<script src="jquery.js" type="text/javascript"></script>
-	<script src="jquery.lazyload.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script>
+	$(function() {
+   		$("img.lazy").lazyload();
+	});
+	</script>
+	<script src="lazyload.min.js" type="text/javascript"></script>
 </html>
