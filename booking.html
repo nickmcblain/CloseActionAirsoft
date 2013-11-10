@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+ 	 	<meta http-equiv="Content-Type" content="text/html">
+		<title>Close Action Airsoft</title>
+		<script type="text/javascript">
+		function checkIE(){
+			if (navigator.userAgent.indexOf("MSIE 10") > -1) {
+				document.body.classList.add("ie10");
+			}else{
+			}
+		}
+		</script>
+		<style>
+			.ie10>.container>nav>ul>li:last-child {
+				padding-right: 23px !important;
+			}
+
+		</style>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+		  	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+		  	<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+		  	<link rel="stylesheet" href="/resources/demos/style.css" />
+		  	<script>
+		  		$(function() {
+			    	$( "#datepicker" ).datepicker();
+			  	});
+		  	</script>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	</head>
+	<body onload="checkIE();">
+		<div class="container">
+			<nav>
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li style="background-color: #799145; color: #FFFFFF; box-shadow: 1.5px 1.5px 10px #000000;"><a>BOOKING</a></li>
+					<li><a href="gallery.php">GALLERY</a></li>
+					<li><a href="location.html">LOCATION</a></li>
+					<li><a href="equipment.html">EQUIPMENT</a></li>
+					<li><a href="ukara.html">UKARA</a></li>
+				</ul>
+			</nav>
+			<section>
+				<div class="banner">
+					<h1 style="text-align: center; margin-bottom: 0px; margin-top: 0px;"><strong>BOOKING</strong></h1>
+					<p style="text-align: center; margin: 0px;">Complete the booking form below with your request and we will <br> get back to you with information about availability</p>
+				</div>
+				<div class="content">
+					<h2 style="text-align: center; color: #799145;">Game Dates</h2>
+					<table style="text-align: center; margin-left: auto; margin-right: auto;">
+						<tr>
+							<td style="padding-right: 100px;">
+								<h4 style="color: #799145;">October</h4>
+								<h5>13th - Weekly Hall Woods</h5>
+								<h5>27th - Weekly Hall Woods</h5>
+							</td>
+							<td style="padding-right: 100px;">
+								<h4 style="color: #799145;">November</h4>
+								<h5>10th - Weekly Hall Woods</h5>
+								<h5>24th - Weekly Hall Woods</h5>
+							</td>
+							<td>
+								<h4 style="color: #799145;">December</h4>
+								<h5>8th - Weekly Hall Woods</h5>
+								<h5>22nd - Weekly Hall Woods</h5>
+							</td>
+						</tr>
+						<tr>
+							<td style="padding-right: 100px;">
+								<h4 style="color: #799145;">January</h4>
+								<h5>5th - Weekly Hall Woods</h5>
+								<h5>19th - Weekly Hall Woods</h5>
+							</td>
+							<td style="padding-right: 100px;">
+								<h4 style="color: #799145;">February</h4>
+								<h5>2nd - Grafton</h5>
+								<h5>16th - Grafton</h5>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<h2 style="text-align: center; color: #799145;">Prices</h2>
+					<table style="text-align: center; margin-left: auto; margin-right: auto; width: 700px;">
+						<tr>
+							<td>
+								<h4 style="color: #799145; padding-left: 20px;">Walkon Fee</h4>
+								<h5>£15.00</h5>
+								<p class="description">This gives you access to the games but you must provide your own equipment.</p>
+							</td>
+							<td>
+								<h4 style="color: #799145;">Weapon Hire</h4>
+								<h5>£45.00</h5>
+								<p class="description">Included in this is Walkon, Weapon, Face Mask, Camo jacket and 3000 rounds of ammunition.</p>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4 style="color: #799145; padding-left: 20px;">Ammunition</h4>
+								<h5>0.20g: £8.00</h5>
+								<h5>0.25g: £10.00</h5>
+							</td>
+							<td>
+								<h4 style="color: #799145;">Bulk Prices</h4>
+								<h5>25 x 0.20g: £150</h5>
+								<h5>25 x 0.25g: £200</h5>
+							</td>
+						</tr>
+					</table>
+					<table style="text-align: center; margin-left: auto; margin-right: auto; width: 700px;">
+						<tr>
+							<td>
+								<h4 style="color: #799145;">Pyrotechnics</h4>
+								<h5>60 second smoke grenages: £2.50*</h5>
+								<h5>Frag grenades: £3.50*</h5>
+								<p class="description">*quantity discount available i.e. Box of 10 frags: £30.00</p>
+							</td>
+						</tr>
+					</table>
+					<br>
+					<br>
+					<div class="form-layout" method="post" action="email.php">
+						<form style="margin-left: 200px;">
+							<label style="margin-right: 37px;">Full Name</label>
+							<input name="name">
+							<br>
+							<label style="margin-right: 72px;">Email</label>
+							<input name="email" type="email">
+							<br>
+							<label>Booking Places</label>
+							<input name="bookingplaces" type="number" min="1" max="15" style="width: 50px;">
+							<br>
+							<label style="margin-right: 16px;">Weapon Hire</label>
+							<input name="weaponhire" type="number" min="0" max="15" style="width: 50px;">
+							<br>
+							<label style="margin-right: 30px;">Game Date</label>
+							<input type="date" id="datepicker" />
+							<br>
+							<label style="margin-right: 30px; color: #799145; float: left;">Additional info</label>
+							<textarea min="0" max="300" style="width: 240px; height: 100px; float: left; margin-bottom: 10px;"></textarea>
+							<br>
+							<input type="submit" style="margin-left: 172px; height: 40px;"></input>
+						</form>
+					</div>
+				</div>
+			</section>
+		</div>
+		<footer>
+				<p style="margin-left: 30px; padding-top: 15px;"><strong style="margin-right: 300px;">Close Action Airsoft | Pixel Blue-Print</strong>   Contact Email: enquiries@close-action.co.uk</p> 
+		</footer>
+	</body>
+</html>
